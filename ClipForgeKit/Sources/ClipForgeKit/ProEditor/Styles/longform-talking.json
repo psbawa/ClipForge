@@ -1,0 +1,49 @@
+{
+  "id": "longform-talking",
+  "version": "2026-11-01",
+  "name": "Long-form YouTube talking head",
+  "summary": "Clean jump cuts, B-roll every few sentences, chapter-style structure.",
+  "platforms": [
+    "YouTube"
+  ],
+  "niches": [
+    "talking head",
+    "education",
+    "vlog"
+  ],
+  "hook": "Promise of the payoff in the first 10 s, then straight in.",
+  "structure": "hook/promise \u2192 context \u2192 main points with B-roll \u2192 recap \u2192 CTA",
+  "idealSeconds": 480,
+  "pacing": {
+    "avgShotSeconds": 6.0,
+    "patternInterruptSeconds": 8,
+    "cutFillers": true
+  },
+  "captions": {
+    "style": "clean",
+    "animation": "none",
+    "uppercase": false,
+    "emoji": false,
+    "wordsPerCard": 6
+  },
+  "motion": {
+    "punchInsPer10s": 0.4,
+    "punchInScale": 1.06,
+    "speedRamps": false,
+    "accentTransitions": [
+      "cut"
+    ],
+    "accentRate": 0.05
+  },
+  "sound": {
+    "whooshOnAccents": false,
+    "hitsOnImpacts": false,
+    "riserBeforeClimax": false,
+    "sfxDensity": 0.1,
+    "musicMood": "chill",
+    "musicEnergy": "low"
+  },
+  "color": "neutral",
+  "origin": "seed",
+  "notes": ""
+}

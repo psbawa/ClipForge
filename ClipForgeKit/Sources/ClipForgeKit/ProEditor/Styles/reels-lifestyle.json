@@ -1,0 +1,51 @@
+{
+  "id": "reels-lifestyle",
+  "version": "2026-11-01",
+  "name": "Reels lifestyle",
+  "summary": "Bright, upbeat, beat-synced cuts with playful text.",
+  "platforms": [
+    "Reels",
+    "TikTok"
+  ],
+  "niches": [
+    "lifestyle",
+    "travel",
+    "food"
+  ],
+  "hook": "Most colorful/fun shot with a playful line.",
+  "structure": "hook \u2192 quick montage on the beat \u2192 favorite moment \u2192 loopable end",
+  "idealSeconds": 20,
+  "pacing": {
+    "avgShotSeconds": 1.3,
+    "patternInterruptSeconds": 2,
+    "cutFillers": false
+  },
+  "captions": {
+    "style": "pop",
+    "animation": "pop",
+    "uppercase": false,
+    "emoji": true,
+    "wordsPerCard": 3
+  },
+  "motion": {
+    "punchInsPer10s": 1.5,
+    "punchInScale": 1.08,
+    "speedRamps": false,
+    "accentTransitions": [
+      "whip",
+      "zoom"
+    ],
+    "accentRate": 0.3
+  },
+  "sound": {
+    "whooshOnAccents": true,
+    "hitsOnImpacts": false,
+    "riserBeforeClimax": false,
+    "sfxDensity": 0.5,
+    "musicMood": "funny",
+    "musicEnergy": "high"
+  },
+  "color": "warm",
+  "origin": "seed",
+  "notes": ""
+}

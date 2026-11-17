@@ -1,0 +1,50 @@
+{
+  "id": "travel-cinematic",
+  "version": "2026-11-01",
+  "name": "Cinematic travel montage",
+  "summary": "Smooth, beat-synced scenery montage with a warm grade and minimal text.",
+  "platforms": [
+    "YouTube Shorts",
+    "Reels",
+    "YouTube"
+  ],
+  "niches": [
+    "travel"
+  ],
+  "hook": "Most breathtaking shot first, held a beat longer.",
+  "structure": "hook \u2192 arrival \u2192 montage of places/food \u2192 golden-hour climax \u2192 calm outro",
+  "idealSeconds": 45,
+  "pacing": {
+    "avgShotSeconds": 2.4,
+    "patternInterruptSeconds": 4,
+    "cutFillers": false
+  },
+  "captions": {
+    "style": "clean",
+    "animation": "none",
+    "uppercase": false,
+    "emoji": false,
+    "wordsPerCard": 4
+  },
+  "motion": {
+    "punchInsPer10s": 0.6,
+    "punchInScale": 1.06,
+    "speedRamps": true,
+    "accentTransitions": [
+      "fade",
+      "whip"
+    ],
+    "accentRate": 0.25
+  },
+  "sound": {
+    "whooshOnAccents": true,
+    "hitsOnImpacts": false,
+    "riserBeforeClimax": true,
+    "sfxDensity": 0.35,
+    "musicMood": "epic",
+    "musicEnergy": "medium"
+  },
+  "color": "cinematic",
+  "origin": "seed",
+  "notes": ""
+}

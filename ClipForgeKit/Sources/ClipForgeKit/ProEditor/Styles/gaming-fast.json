@@ -1,0 +1,51 @@
+{
+  "id": "gaming-fast",
+  "version": "2026-11-01",
+  "name": "Fast gaming edit",
+  "summary": "Rapid cuts, punch-ins on kills, whooshes and hits, hype music.",
+  "platforms": [
+    "YouTube Shorts",
+    "TikTok",
+    "Reels"
+  ],
+  "niches": [
+    "gaming"
+  ],
+  "hook": "Open on the kill/clutch itself or its aftermath with a curiosity caption.",
+  "structure": "hook \u2192 rapid build-up of plays \u2192 biggest play (slow-mo) \u2192 reaction/payoff \u2192 loop back",
+  "idealSeconds": 30,
+  "pacing": {
+    "avgShotSeconds": 1.6,
+    "patternInterruptSeconds": 2.5,
+    "cutFillers": true
+  },
+  "captions": {
+    "style": "pop",
+    "animation": "pop",
+    "uppercase": true,
+    "emoji": true,
+    "wordsPerCard": 3
+  },
+  "motion": {
+    "punchInsPer10s": 3.0,
+    "punchInScale": 1.15,
+    "speedRamps": true,
+    "accentTransitions": [
+      "flash",
+      "zoom",
+      "whip"
+    ],
+    "accentRate": 0.3
+  },
+  "sound": {
+    "whooshOnAccents": true,
+    "hitsOnImpacts": true,
+    "riserBeforeClimax": true,
+    "sfxDensity": 0.8,
+    "musicMood": "hype",
+    "musicEnergy": "high"
+  },
+  "color": "punchy",
+  "origin": "seed",
+  "notes": ""
+}

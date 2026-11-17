@@ -1,0 +1,52 @@
+{
+  "id": "before-after",
+  "version": "2026-11-01",
+  "name": "Before / after",
+  "summary": "Show the 'before', build anticipation, hard cut to the 'after'.",
+  "platforms": [
+    "TikTok",
+    "Reels",
+    "YouTube Shorts"
+  ],
+  "niches": [
+    "transformation",
+    "diy",
+    "gaming"
+  ],
+  "hook": "The 'after' teased for half a second, then back to 'before'.",
+  "structure": "tease after \u2192 before \u2192 process montage \u2192 full reveal",
+  "idealSeconds": 25,
+  "pacing": {
+    "avgShotSeconds": 1.8,
+    "patternInterruptSeconds": 2.5,
+    "cutFillers": false
+  },
+  "captions": {
+    "style": "pop",
+    "animation": "pop",
+    "uppercase": true,
+    "emoji": true,
+    "wordsPerCard": 3
+  },
+  "motion": {
+    "punchInsPer10s": 1.0,
+    "punchInScale": 1.1,
+    "speedRamps": true,
+    "accentTransitions": [
+      "flash",
+      "whip"
+    ],
+    "accentRate": 0.35
+  },
+  "sound": {
+    "whooshOnAccents": true,
+    "hitsOnImpacts": true,
+    "riserBeforeClimax": true,
+    "sfxDensity": 0.6,
+    "musicMood": "hype",
+    "musicEnergy": "high"
+  },
+  "color": "punchy",
+  "origin": "seed",
+  "notes": ""
+}

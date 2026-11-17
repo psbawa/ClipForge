@@ -1,0 +1,50 @@
+{
+  "id": "aesthetic-vlog",
+  "version": "2026-11-01",
+  "name": "Calm aesthetic vlog",
+  "summary": "Slow, soft, lots of breathing room; gentle captions; muted pastel look.",
+  "platforms": [
+    "Reels",
+    "TikTok",
+    "YouTube"
+  ],
+  "niches": [
+    "vlog",
+    "lifestyle"
+  ],
+  "hook": "A quiet, beautiful detail with a soft text line.",
+  "structure": "hook detail \u2192 routine moments \u2192 small highlight \u2192 cozy ending",
+  "idealSeconds": 40,
+  "pacing": {
+    "avgShotSeconds": 3.2,
+    "patternInterruptSeconds": 5,
+    "cutFillers": true
+  },
+  "captions": {
+    "style": "clean",
+    "animation": "none",
+    "uppercase": false,
+    "emoji": true,
+    "wordsPerCard": 5
+  },
+  "motion": {
+    "punchInsPer10s": 0.3,
+    "punchInScale": 1.04,
+    "speedRamps": false,
+    "accentTransitions": [
+      "fade"
+    ],
+    "accentRate": 0.4
+  },
+  "sound": {
+    "whooshOnAccents": false,
+    "hitsOnImpacts": false,
+    "riserBeforeClimax": false,
+    "sfxDensity": 0.1,
+    "musicMood": "chill",
+    "musicEnergy": "low"
+  },
+  "color": "muted",
+  "origin": "seed",
+  "notes": ""
+}

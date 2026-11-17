@@ -1,0 +1,50 @@
+{
+  "id": "podcast-bold",
+  "version": "2026-11-01",
+  "name": "Podcast clip, bold captions",
+  "summary": "Talking head with big word-by-word captions, filler-free, punch-ins on key lines.",
+  "platforms": [
+    "YouTube Shorts",
+    "TikTok",
+    "Reels"
+  ],
+  "niches": [
+    "podcast",
+    "talking head"
+  ],
+  "hook": "Start mid-statement on the most surprising claim.",
+  "structure": "claim \u2192 context \u2192 punchline/insight \u2192 open loop",
+  "idealSeconds": 45,
+  "pacing": {
+    "avgShotSeconds": 4.0,
+    "patternInterruptSeconds": 3,
+    "cutFillers": true
+  },
+  "captions": {
+    "style": "pop",
+    "animation": "pop",
+    "uppercase": true,
+    "emoji": false,
+    "wordsPerCard": 3
+  },
+  "motion": {
+    "punchInsPer10s": 2.0,
+    "punchInScale": 1.12,
+    "speedRamps": false,
+    "accentTransitions": [
+      "zoom"
+    ],
+    "accentRate": 0.15
+  },
+  "sound": {
+    "whooshOnAccents": false,
+    "hitsOnImpacts": true,
+    "riserBeforeClimax": false,
+    "sfxDensity": 0.3,
+    "musicMood": "chill",
+    "musicEnergy": "low"
+  },
+  "color": "neutral",
+  "origin": "seed",
+  "notes": ""
+}

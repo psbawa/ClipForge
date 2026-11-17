@@ -1,0 +1,52 @@
+{
+  "id": "pov-storytime",
+  "version": "2026-11-01",
+  "name": "POV / storytime",
+  "summary": "Text-led narrative: 'POV:' setup, steady pacing, reveal at the end.",
+  "platforms": [
+    "TikTok",
+    "Reels",
+    "YouTube Shorts"
+  ],
+  "niches": [
+    "storytime",
+    "vlog",
+    "gaming"
+  ],
+  "hook": "\"POV: \u2026\" text over the setup shot.",
+  "structure": "POV setup \u2192 escalation \u2192 twist/reveal \u2192 reaction",
+  "idealSeconds": 35,
+  "pacing": {
+    "avgShotSeconds": 2.5,
+    "patternInterruptSeconds": 3,
+    "cutFillers": true
+  },
+  "captions": {
+    "style": "boxed",
+    "animation": "pop",
+    "uppercase": false,
+    "emoji": true,
+    "wordsPerCard": 5
+  },
+  "motion": {
+    "punchInsPer10s": 1.0,
+    "punchInScale": 1.08,
+    "speedRamps": false,
+    "accentTransitions": [
+      "cut",
+      "zoom"
+    ],
+    "accentRate": 0.15
+  },
+  "sound": {
+    "whooshOnAccents": true,
+    "hitsOnImpacts": true,
+    "riserBeforeClimax": false,
+    "sfxDensity": 0.4,
+    "musicMood": "funny",
+    "musicEnergy": "medium"
+  },
+  "color": "neutral",
+  "origin": "seed",
+  "notes": ""
+}

@@ -1,0 +1,51 @@
+{
+  "id": "countdown",
+  "version": "2026-11-01",
+  "name": "Top-N countdown",
+  "summary": "Numbered moments from #5 to #1 with number cards and hits on each reveal.",
+  "platforms": [
+    "YouTube Shorts",
+    "TikTok",
+    "YouTube"
+  ],
+  "niches": [
+    "gaming",
+    "compilation"
+  ],
+  "hook": "Flash of #1, then 'Top 5 \u2026' text.",
+  "structure": "hook (#1 teaser) \u2192 #5 \u2026 #2 \u2192 #1 with slow-mo \u2192 outro",
+  "idealSeconds": 45,
+  "pacing": {
+    "avgShotSeconds": 3.5,
+    "patternInterruptSeconds": 3,
+    "cutFillers": false
+  },
+  "captions": {
+    "style": "boxed",
+    "animation": "pop",
+    "uppercase": true,
+    "emoji": false,
+    "wordsPerCard": 3
+  },
+  "motion": {
+    "punchInsPer10s": 1.2,
+    "punchInScale": 1.1,
+    "speedRamps": true,
+    "accentTransitions": [
+      "flash",
+      "whip"
+    ],
+    "accentRate": 0.5
+  },
+  "sound": {
+    "whooshOnAccents": true,
+    "hitsOnImpacts": true,
+    "riserBeforeClimax": true,
+    "sfxDensity": 0.6,
+    "musicMood": "hype",
+    "musicEnergy": "high"
+  },
+  "color": "punchy",
+  "origin": "seed",
+  "notes": ""
+}
