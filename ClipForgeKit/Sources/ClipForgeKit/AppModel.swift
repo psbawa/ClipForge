@@ -409,6 +409,8 @@ public final class AppModel {
         let rec = ClipRecord(h, style: settings.captionStyle)
         rec.source = src
         rec.styleID = runStyleID
+        // The style's caption look becomes the clip's own; after that, the clip's caption style is the source of truth.
+        if let p = runStyleID.flatMap(StyleLibrary.profile) { rec.captionStyle = p.captions.style }
         context.insert(rec)
         save()
         await render(rec, words: words)
@@ -449,6 +451,11 @@ public final class AppModel {
                                              to: src.folder.appendingPathComponent("clips"))
             rec.editorNotes = look.map { editorNotes(rec, $0) }
             rec.framingSummary = r.framingSummary
+            // Each render has its own file; drop the one it replaces (video, subtitles, framing plan).
+            for old in [rec.videoPath, rec.srtPath, rec.videoPath.map { ($0 as NSString).deletingPathExtension + ".framing.json" }].compactMap({ $0 })
+            where old != r.video.path && old != r.srt.path && old.hasPrefix(src.folder.path) {
+                try? FileManager.default.removeItem(atPath: old)
+            }
             rec.videoPath = r.video.path
             rec.srtPath = r.srt.path
             rec.start = r.start
@@ -591,7 +598,9 @@ extension AppModel {
         let i = settings.clipIntensity
         let selected = abs(rec.coreEnd - rec.coreStart - SelectionConfig.leadIn - SelectionConfig.payoff) < 0.6
         let peak = rec.coreEnd > rec.coreStart ? (selected ? rec.coreStart + SelectionConfig.leadIn : (rec.coreStart + rec.coreEnd) / 2) - rec.start : nil
-        return ClipLook(captionStyle: p.captions.style, uppercase: p.captions.uppercase, pop: p.captions.animation == "pop",
+        // The clip's caption style wins (it's what Review shows and lets you change). Uppercase is part of the profile's
+        // own caption look, so it only applies while the clip still uses that style.
+        return ClipLook(captionStyle: rec.captionStyle, uppercase: p.captions.uppercase && rec.captionStyle == p.captions.style, pop: p.captions.animation == "pop",
                         grade: EditPlanner.grade(p.color),
                         punchAt: p.motion.punchInsPer10s * (0.4 + i) >= 0.5 ? peak : nil,
                         punchScale: p.motion.punchInScale + 0.05 * i,

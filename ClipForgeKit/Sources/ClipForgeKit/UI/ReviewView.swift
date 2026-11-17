@@ -117,6 +117,8 @@ struct ReviewView: View {
         .frame(minWidth: 860, minHeight: 700)
         .onAppear(perform: load)
         .onChange(of: clip.videoPath) { reloadPlayer() }
+        // Applying a Pro Editor style changes the clip's caption style; keep the picker showing what will render.
+        .onChange(of: clip.captionStyle) { style = clip.captionStyle }
         .onChange(of: model.voiceJobs[clip.id] == nil) { if model.voiceJobs[clip.id] == nil { reloadPlayer() } }
         .onDisappear { saveMeta(); player.pause() }
         .sheet(isPresented: $showReject) { rejectSheet.themedSheet() }

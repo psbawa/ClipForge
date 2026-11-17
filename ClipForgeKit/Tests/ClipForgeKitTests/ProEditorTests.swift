@@ -158,3 +158,17 @@ extension PublishTests {
     #expect(!TrendRefresh.changed(base, { var b = base; b.notes = "x"; b.version = "v2"; return b }()))
     #expect(TrendRefresh.changed(base, p))
 }
+
+/// Regression: the Pro Editor look used to replace the caption style chosen in Review, so re-renders never changed it.
+@MainActor @Test func reviewCaptionStyleWinsOverTheProEditorLook() throws {
+    let (m, _, src) = try makeModel(channel: "UC_me")
+    let rec = ClipRecord(Highlight(start: 10, end: 30, title: "t", hook: "", score: 80, reason: "r"), style: .pop)
+    rec.source = src; rec.styleID = "gaming-fast"
+    let p = try #require(StyleLibrary.profile("gaming-fast"))
+    rec.captionStyle = p.captions.style
+    #expect(m.clipLook(for: rec)?.captionStyle == p.captions.style && m.clipLook(for: rec)?.uppercase == p.captions.uppercase)
+    rec.captionStyle = p.captions.style == .boxed ? .clean : .boxed          // the user picks another style in Review
+    let look = try #require(m.clipLook(for: rec))
+    #expect(look.captionStyle == rec.captionStyle)
+    #expect(look.uppercase == false)                                         // the profile's uppercase belongs to its own style
+}

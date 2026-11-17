@@ -85,7 +85,9 @@ public actor ClipService: ClipRendering {
         let style = look?.captionStyle ?? style
         let captions = try CaptionService.renderOverlay(mainWords, clipStart: s, clipEnd: s + duration, style: style,
                                                         pop: look?.pop ?? false, into: work.appendingPathComponent("captions"))
-        let name = "clip-\(Int(s))-\(Int(s + duration))"
+        // A new name per render: re-renders of the same range never overwrite the file a player still has open, and the
+        // clip's video path changes, so every view showing it reloads.
+        let name = "clip-\(Int(s))-\(Int(s + duration))-\(UUID().uuidString.prefix(6))"
         let out = dir.appendingPathComponent(name + ".mp4"), srt = dir.appendingPathComponent(name + ".srt")
         // Pacing: cut fillers and long pauses (not with a voiceover, whose lines are timed to the uncut clip).
         let keep = look?.cutFillers == true && voice == nil ? Self.pacingKeep(rel(words.slice(s, s + duration), s), duration: duration) : nil

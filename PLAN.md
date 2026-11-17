@@ -164,3 +164,13 @@ Gameplay video → 9:16 story short (hook → buildup → climax → payoff), tw
 - "See the video": `VideoWatcher` — Haiku rates the whole video as timestamped 3×3 contact sheets → "watch" signal (weight
   0.30) + labels shown to triage/Sonnet and in "Why this clip".
 - Real runs (19-min 1080p AV1 video): 3.5–3.8 min end to end incl. transcription and rendering 3–5 clips, ≈ $0.065.
+
+## Fix: Review edits not showing after re-render (root causes)
+- Caption style: whenever a Pro Editor style was active (Auto = always), `ClipLook.captionStyle` came from the profile and
+  replaced the style picked in Review, so re-renders kept the old captions. Now the clip's caption style is the source of
+  truth: a style sets it when applied (cut / Apply style), Review can change it; the profile's uppercase only applies while
+  the clip keeps the profile's own style. Review's picker follows the clip when a style is applied.
+- Stale output: every render of the same range overwrote `clip-<start>-<end>.mp4`, so the clip's video path never changed.
+  Each render now gets its own file (old video/SRT/framing removed after success), so all views reload.
+- Verified on a real 1080p clip: Pop → Boxed → Clean + blur → manual crop + trim → travel-cinematic → no style; each
+  re-render produced the change, only the latest file remained.

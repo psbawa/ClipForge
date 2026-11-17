@@ -41,6 +41,7 @@ extension AppModel {
             return
         }
         rec.styleID = styleID
+        if let p = styleID.flatMap(StyleLibrary.profile) { rec.captionStyle = p.captions.style }   // applying a style brings its captions
         settings.clipIntensity = intensity
         save()
         await rerender(rec, start: rec.start, end: rec.end, style: rec.captionStyle)
